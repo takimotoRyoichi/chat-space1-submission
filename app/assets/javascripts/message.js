@@ -1,24 +1,22 @@
 $(document).on('turbolinks:load', function() {
   function buildSendMessageHTML(message){
     var image = (message.image.url) ? `<img src = ${message.image.url} class: "lower-message__image">` : "";
-    var html = `<strong>
-                  <div class = "message" data-message-id="${message.id}">
-                    <div class = "upper-message">
-                      <div class = "upper-message__user-name">
-                        ${message.user_name}
-                      </div>
-                      <div class="upper-message__date">
-                        ${message.date}
-                      </div>
+    var html = `<div class = "message" data-message-id="${message.id}">
+                  <div class = "upper-message">
+                    <div class = "upper-message__user-name">
+                      ${message.user_name}
                     </div>
-                    <div class="lower-message">
-                      <p class="lower-message__content">
-                        ${message.content}
-                      </p>
-                      ${image}
+                    <div class="upper-message__date">
+                      ${message.date}
                     </div>
                   </div>
-                </strong>`
+                  <div class="lower-message">
+                    <p class="lower-message__content">
+                      ${message.content}
+                    </p>
+                    ${image}
+                  </div>
+                </div>`
   return html;
   }
 
