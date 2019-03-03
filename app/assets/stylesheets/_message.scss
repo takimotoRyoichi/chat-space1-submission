@@ -1,8 +1,12 @@
   .wrapper {
     display: flex;
-    margin-top: 28px;
+
+      }
    .chat {
+  height: 100vh;
   width: calc(100% - 300px);
+  float: right;
+  position: relative;
 
   .header {
     box-sizing: border-box;
@@ -34,6 +38,10 @@
       line-height: 40px;
       margin-top: 28px;
       padding: 0 20px;
+      &__button {
+        color: #38AEF0;
+        text-decoration: none;
+      }
     }
   }
 
@@ -42,6 +50,7 @@
     box-sizing: border-box;
     padding: 46px 40px 0;
     height: calc(100% - 100px - 90px);
+    overflow: scroll;
     .message {
       .upper-message {
         display: flex;
@@ -73,7 +82,11 @@ $white: #fff;
     background-color: #DDDDDD;
     box-sizing: border-box;
     height: 90px;
+    width: calc(100vh - 300px);
     padding: 20px 50px 20px 40px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
     &__message {
       border: none;
       float: left;
@@ -106,5 +119,4 @@ $white: #fff;
       position: absolute;
     }
   }
-}
 }
