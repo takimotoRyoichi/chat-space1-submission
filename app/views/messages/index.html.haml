@@ -14,8 +14,7 @@
               = user.name
 
       .right-header
-        .right-head__button
-          Edit
+        = link_to 'Edit', edit_group_path(@group), class: "right-header__button"
 
     .messages
       = render partial: 'message', collection: @messages
