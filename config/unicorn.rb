@@ -40,8 +40,3 @@ after_fork do |_server, _worker|
   defined?(ActiveRecord::Base) && ActiveRecord::Base.establish_connection
 end
 
-group :production do
-  gem 'unicorn'
-  gem 'unicorn_rails'
-end
-
