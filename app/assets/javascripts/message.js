@@ -48,28 +48,5 @@ $(document).on('turbolinks:load', function() {
     .always(function() {
       $('.form__submit').prop('disabled',false);
     })
-
-    function update(){
-    var lastMessageId = $('.message').last().data('message_id');
-    var pathname = location.pathname;
-
-    $.ajax({
-      url: pathname,
-      type: 'GET',
-      data: { message: lastMessageId},
-      dataType: 'json'
-    })
-
-    .done(function(data){
-      data.forEach( function(new_message){
-      var html = buildHTML(new_message);
-      $('.messages').append(html);
-      })
-    });
-  }
-
-    setInterval(update, 5000);
   })
 });
-
-
