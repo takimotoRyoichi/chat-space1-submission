@@ -66,8 +66,4 @@ gem 'mini_magick'
 
 group :production do
   gem 'unicorn'
-<<<<<<< HEAD
-=======
-  gem 'unicorn_rails'
->>>>>>> origin/master
 end
